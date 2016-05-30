@@ -2,4 +2,4 @@
 
 cd source-code
 mvn package -DskipTests=true
-cp target/*.jar ../build-resource
+cp manifest.yml target/*.jar ../build-resource
