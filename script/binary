@@ -1,0 +1,4 @@
+#!/bin/sh
+
+mvn package -DskipTests=true
+cp target/*.jar ../build-resource
