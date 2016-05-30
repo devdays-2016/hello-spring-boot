@@ -5,8 +5,18 @@ resources:
     uri: https://github.com/devdays-2016/hello-spring-boot.git
     branch: master
 
+- name: cf-deploy
+  type: cf
+  source:
+    api: https://api.run.pivotal.io
+    username: {{cf-username}}
+    password: {{cf-password}}
+    organization: devdays
+    space: development
+
 jobs:
 - name: compile-job
+  serial: true
   plan:
   - {get: source-code, trigger: true}
   - task: compile
@@ -19,3 +29,6 @@ jobs:
         source: {repository: maven}
       run:
         path: source-code/script/test
+  - put: cf-deploy
+    params:
+      manifest: source-code/manifest.yml
