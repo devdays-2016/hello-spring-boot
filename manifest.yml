@@ -1,0 +1,4 @@
+---
+applications:
+- name: devdays-hello-spring-boot
+  memory: 512M
