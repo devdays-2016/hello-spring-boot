@@ -2,3 +2,4 @@
 
 cd source-code
 mvn test
+cp target/*.jar ../build-resource
