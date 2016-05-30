@@ -8,7 +8,7 @@ resources:
 jobs:
 - name: compile-job
   plan:
-  - get: source-code
+  - {get: source-code, trigger: true}
   - task: compile
     config:
       platform: linux
