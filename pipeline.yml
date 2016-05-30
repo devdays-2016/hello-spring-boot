@@ -11,10 +11,11 @@ jobs:
   - {get: source-code, trigger: true}
   - task: compile
     config:
+      inputs:
+        - name: source-code
       platform: linux
       image_resource:
         type: docker-image
         source: {repository: maven}
       run:
-        path: ls
-        args: ["-lA"]
+        path: source-code/script/test
