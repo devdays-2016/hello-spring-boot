@@ -29,6 +29,18 @@ jobs:
         source: {repository: maven}
       run:
         path: source-code/script/test
+  - task: binary
+    config:
+      inputs:
+        - name: source-code
+      outputs:
+        - name: build-resource
+      platform: linux
+      image_resource:
+        type: docker-image
+        source: {repository: maven}
+      run:
+        path: source-code/script/binary
   - put: cf-deploy
     params:
-      manifest: source-code/manifest.yml
+      manifest: build-resource/manifest.yml
