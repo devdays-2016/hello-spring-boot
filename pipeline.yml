@@ -54,4 +54,4 @@ jobs:
       text: New Deploy available at http://devdays-hello-spring-boot.cfapps.io/
       channel: "#concourse"
       username: ConcourseCI
-      icon_url: ":airplane:"
+      icon_url: ":baggage_claim:"
