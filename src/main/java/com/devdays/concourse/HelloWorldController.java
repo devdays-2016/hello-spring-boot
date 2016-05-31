@@ -13,7 +13,7 @@ public class HelloWorldController {
   @RequestMapping("/")
   public @ResponseBody Map<String, String> helloWorld() {
     Map<String, String> result = new HashMap<>();
-    result.put("greeting", "Hello, cloud!");
+    result.put("greeting", "Hello, Dev Days 2016!");
     return result;
   }
 }
