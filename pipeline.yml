@@ -15,10 +15,11 @@ resources:
     space: development
 
 jobs:
-- name: compile-job
+- name: build
   serial: true
   plan:
-  - {get: source-code, trigger: true}
+  - get: source-code
+    trigger: true
   - task: compile
     config:
       inputs:
