@@ -51,7 +51,7 @@ jobs:
       manifest: build-resource/manifest.yml
   - put: slack-alert
     params:
-      text: New Deploy available at
+      text: New Deploy available at http://devdays-hello-spring-boot.cfapps.io/
       channel: "#concourse"
       username: ConcourseCI
       icon_url: ":airplane:"
