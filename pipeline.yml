@@ -14,6 +14,11 @@ resources:
     organization: devdays
     space: development
 
+- name: slack-alert
+  type: slack-notification
+  source:
+    url:  https://hooks.slack.com/services/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
+
 jobs:
 - name: compile-job
   serial: true
