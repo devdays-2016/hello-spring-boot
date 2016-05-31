@@ -55,3 +55,4 @@ jobs:
       channel: "#concourse"
       username: ConcourseCI
       icon_url: ":baggage_claim:"
+      silent: true
